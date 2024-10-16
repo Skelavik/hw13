@@ -18,7 +18,7 @@
       </a>
       <a href="/bookmarks.html" class="header__bookmark-btn">
         <img src="static/img/bookmark.png" alt="" class="header__bookmark-icon" width="28">
-        <span class="header__bookmark-counter">3</span>
+        <span class="header__bookmark-counter">{{ len }}</span>
       </a>
     </div>
   </header>
@@ -40,7 +40,7 @@
               <div class="item__ava-wrap">
                 <img src="{{ data_post.poster_avatar }}" alt="" class="item__ava" width="47">
               </div>
-              <span class="item__username"> <p>{{ data_post.poster_name}}</p> </span>
+              <span class="item__username"> {{ data_post.poster_name}}</span>
             </a>
           </div>
           <a href="/post.html" class="item__post-link">
@@ -49,7 +49,7 @@
           <p class="item__descr">{{data_post.content}}</p>
           <div class="item__post-info">
             <div class="item__counter">
-              <img src="static/data/img/eye.png" alt="" class="item__counter-icon" width="26">
+              <img src="static/img/eye.png" alt="" class="item__counter-icon" width="26">
               <span class="item__counter-text">{{ data_post.views_count }}</span>
             </div>
           </div>

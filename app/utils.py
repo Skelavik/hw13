@@ -50,7 +50,14 @@ def get_post_by_pk(pk):
         if pk_posts["pk"] == pk:
             return pk_posts
 
-def load_picture_veiws():
-    pass
+def load_bookmarks():
+    """Загрузка закладок"""
+    with open("data/bookmarks.json", "r" ,encoding="utf-8") as f:
+        data = json.load(f)
+    return data
+
+def len_bookmarks():
+    return len(load_bookmarks())
+
 
 
