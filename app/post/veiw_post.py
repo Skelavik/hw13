@@ -5,7 +5,7 @@ post_blueprint = Blueprint("post_blueprint", __name__)
 
 @post_blueprint.route("/post")
 def post_page():
-    return render_template('post.html')
+    return render_template('post.html',)
 
 
 

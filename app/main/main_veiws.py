@@ -7,7 +7,6 @@ main_blueprint = Blueprint("main_blueprint", __name__)
 def main_page():
     data_for_posts = get_post_all()
     len_b = len_bookmarks()
-    return render_template('index.html', data=data_for_posts,
-                           len=len_b)
+    return render_template('index.html', data=data_for_posts, len=len_b)
 
 
