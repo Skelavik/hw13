@@ -10,3 +10,10 @@ def main_page():
     return render_template('index.html', data=data_for_posts, len=len_b)
 
 
+@main_blueprint.route("/search")
+def search_page():
+    search_by = request.args['s']
+    len_b = len_bookmarks()
+    posts = [x for x in get_post_all() if search_by in x['content'].lower()]
+    len_p = len(posts)
+    return render_template('search.html ', data=posts, len_b=len_b, len_p=len_p)
